@@ -30,7 +30,7 @@ router.get('/profile', isLoggedIn, (req, res) => {
     res.render('profile')
 })
 
-router.get('/logout',isNotLoggedIn, (req, res) => {
+router.get('/logout', (req, res) => {
     req.logOut()
     res.redirect('/signin')
 })
