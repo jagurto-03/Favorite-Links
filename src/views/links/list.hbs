@@ -12,16 +12,16 @@
                         </a>
                         <p class="m-2">{{ description }}</p>
                         <p>{{ timeago created_at }}</p>
-                        <a href="/links/delete/{{ id }}" class="btn btn-danger">Delete links</a>
-                        <a href="/links/edit/{{ id }}" class="btn btn-secondary">Edit</a>
+                        <a href="/links/delete/{{ id }}" class="btn btn-danger">Borrar link</a>
+                        <a href="/links/edit/{{ id }}" class="btn btn-secondary">Editar</a>
                     </div>
                 </div>
             </div>
         {{else}}
             <div class="col-md-4 mx-auto">
                 <div class="card card-body text-center">
-                    <p>There are not links saved yet.</p>
-                    <a href="/links/add">Created one</a>
+                    <p>Aún no hay enlaces guardados.</p>
+                    <a href="/links/add">Crea uno</a>
                 </div>
             </div>
         {{/each}}

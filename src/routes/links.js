@@ -18,7 +18,7 @@ router.post('/add', isLoggedIn, async (req, res) => {
         user_id: req.user.id
     }
     await pool.query('INSERT INTO links set ?', [newLink])
-    req.flash('success', 'Link Saved Succesfully')
+    req.flash('success', 'Link Guardado Satisfactoriamente')
     res.redirect('/links')
 })
 
@@ -30,7 +30,7 @@ router.get('/', isLoggedIn, async (req, res) =>{
 router.get('/delete/:id', isLoggedIn, async (req, res) =>{
     const {id} = req.params
     await pool.query('DELETE FROM links WHERE ID = ?', [id])
-    req.flash('success', 'Link Remove Succesfully')
+    req.flash('success', 'Link Eliminado Satisfactoriamente')
     res.redirect('/links')
 })
 
@@ -49,7 +49,7 @@ router.post('/edit/:id', isLoggedIn, async (req, res) => {
         url
     }
     await pool.query('UPDATE links set ? WHERE id = ?',[newLink, id])
-    req.flash('success', 'Link Update Succesfully')
+    req.flash('success', 'Link Editado Satisfactoriamente')
     res.redirect('/links')
 })
 
